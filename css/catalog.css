@@ -23,6 +23,9 @@
     font-weight: bold;
     color: #F16D7F;
 }
+.catalog_block{
+    margin-bottom: 97px;
+}
 .filter{
     display: flex;
     margin-bottom: 64px;
@@ -38,7 +41,6 @@ select{
     border: 1px solid white
 }
 .sort{
-    max-width: 300px;
     display: flex;
     margin: auto;
 }
@@ -55,21 +57,31 @@ select{
     margin-bottom: 30px;
 }
 .card_pagination{
-    margin: auto;
-    padding: 49px 0 96px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 48.5px;
 }
 ul.pagination {
     display: inline-block;
     padding: 0;
     margin: 0;
+    border: 1px solid #EBEBEB;
 }
 ul.pagination li {
     display: inline;
 }
 ul.pagination li a {
+    text-decoration: none;
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #C4C4C4;
+}
+ul.pagination li a:hover{
+    color: #EF5B70;
 }

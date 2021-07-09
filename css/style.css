@@ -100,16 +100,16 @@ header{
     background-color: rgba(33, 22, 22, 0.7);
 }
 .for_women{
-    background-image: url(../img/women.png);
+    background-image: url(../img/for_women.jpg);
 }
 .for_man{
-    background-image: url(../img/for_men.png);
+    background-image: url(../img/for_men.jpg);
 }
 .for_kids{
-    background-image: url(../img/kids.png);
+    background-image: url(../img/for_kids.jpg);
 }
 .accesories{
-    background-image: url(../img/accesories.png);
+    background-image: url(../img/accesories.jpg);
 }
 .category_text{
     position: absolute;
@@ -164,6 +164,44 @@ header{
 .card:nth-child(-n+3){
     margin-bottom: 30px;
 }
+.card_item{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+.card_item:hover{
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color:  rgba(58, 56, 56, 0.86);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card_item:hover .overlay{
+    opacity: 1;
+}
+.btn{
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 14px 16px 12px 50px;
+    background-image: url(../img/cart.svg);
+    background-repeat: no-repeat;
+    background-position: 11px center;
+    background-color: rgba(58, 56, 56, 0.24);
+    border: 1px solid #FFFFFF;
+}
 .card_heading{
     margin: 24px 0 13px 18px;
     font-size: 13px;
@@ -184,7 +222,8 @@ header{
 }
 .product{
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    margin-top: 49px;
 }
 .product_button{
     font-size: 16px;
@@ -192,8 +231,7 @@ header{
     color: #F26376;
     text-decoration: none;
     padding: 14px 38px;
-    border: 1px solid #FF6A6A;
-    margin-top: 49px;
+    border: 1px solid #FF6A6A; 
 }
 .product_button:hover{
     color: rgba(255, 255, 255, 1);
@@ -244,7 +282,7 @@ header{
 .footer_bottom{
     background-blend-mode: lighten;
     background-color: rgba(244, 244, 244, 0.7);
-    background-image: url(../img/back_footer.png);
+    background-image: url(../img/back_footer.jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -293,7 +331,7 @@ header{
     background: #E1E1E1;
     width: 256px;
     height: 49px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 50px 0 0 50px;
     border: 0px;
     padding-left: 22px;
     font-size: 14px;
@@ -302,10 +340,11 @@ header{
     opacity: 0.67;
 }
 .button{
+    cursor: pointer;
     background: rgba(241, 109, 127, 1);
     width: 100px;
     height: 49px;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 50px 50px 0;
     border: 0px;
     font-size: 14px;
     line-height: 17px;
@@ -343,9 +382,30 @@ header{
 .social_item:hover{
     background-color: #F16D7F;
 }
-.social_item svg{
+.svg_item{
     fill: #000000;
 }
-.social_item:hover svg{
+.social_item:hover .svg_item{
     fill: #FFFFFF;
+}
+.social_icon{
+    display: flex;
+    justify-content: flex-end;
+}
+.social-link{
+    width: 32px;
+    height: 32px;
+    color: #000000;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-link:not(:last-child){
+    margin-right: 7px;
+}
+.social-link:hover{
+    color: #FFFFFF;
+    background: rgba(241, 109, 127, 1);
 }
