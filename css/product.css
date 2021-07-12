@@ -34,13 +34,15 @@
     background: rgba(247, 247, 247, 1);
 }
 .carousel-control-prev{
-    margin: 365px 0;
+    left: 5px;
+    margin-top: 365px;
     width: 47px;
     height: 47px;
     background: rgba(42, 42, 42, 0.15);
 }
 .carousel-control-next{
-    margin: 365px 0;
+    right: 5px;
+    margin-top: 365px;
     width: 47px;
     height: 47px;
     background: rgba(42, 42, 42, 0.15);
