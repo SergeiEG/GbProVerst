@@ -1,0 +1,29 @@
+header{
+    background: #222222;
+    padding: 19px 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    &-left{
+        display: flex;
+    }
+    &-right{
+        display: flex;
+    }
+    &__logo{
+        margin-right: 41px;
+        text-decoration: none;
+    }
+    &__item{
+        align-self: center;
+        text-decoration: none;
+        
+        &:not(:last-child){
+            margin-right: 33px;
+        }
+    }
+    &__search-form{
+        align-self: center;
+    }
+}
