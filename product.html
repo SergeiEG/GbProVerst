@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/product.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,24 +20,24 @@
 <body>
     <header>
         <section class="header container">
-            <div class="header_left">
+            <div class="header-left">
                 <nav>
-                    <a class="header_logo" href="index.html">
+                    <a class="header__logo" href="index.html">
                         <img src="img/logo.png" alt="logo">
                     </a>
                 </nav>
-                <div class="search">
-                    <img src="img/find.svg" alt="search">
+                <div class="header__search-form">
+                    <img src="img/find.svg" alt="search-form">
                 </div>
             </div>
-            <nav class="header_right">
-                <div class="header_item">
+            <nav class="header-right">
+                <div class="header__item">
                     <img src="img/menu.svg" alt="menu">
                 </div>
-                <a class="header_item" href="#">
+                <a class="header__item" href="#">
                     <img src="img/registration.svg" alt="registration">
                 </a>
-                <a class="header_item" href="#">
+                <a class="header__item" href="cart.html">
                     <img src="img/basket.svg" alt="basket">
                 </a>
             </nav>
@@ -47,9 +46,9 @@
 
     <main>
         <section class="intro">
-            <div class="container intro_block">
-                <h2 class="intro_heading">NEW ARRIVALS</h2>
-                <h3 class="intro_path">HOME / MEN / <span class="intro_path-strong">NEW ARRIVALS</span></h3>
+            <div class="container intro__wrap">
+                <h2>NEW ARRIVALS</h2>
+                <h3>HOME / MEN / <span>NEW ARRIVALS</span></h3>
             </div>
         </section>
 
@@ -170,42 +169,42 @@
     </main>
 
     <footer>
-        <section class="footer_bottom">
+        <section class="footer">
             <div class="container">
-                <div class="sub_info">
-                    <aside class="footer_quote">
-                        <p class="quote_text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                <div class="footer__info">
+                    <aside class="footer__text">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
                             condimentum“</p>
                     </aside>
-                    <form class="footer_form" action="subscribe_form">
-                        <h3 class="form_text"><span class="form_text-strong">SUBSCRIBE</span><br> OUR NEWLETTER AND
+                    <form class="subscribe-form" action="form">
+                        <h3><span>SUBSCRIBE</span><br> OUR NEWLETTER AND
                             PROMOTION</h3>
-                        <div class="send_form">
-                            <input type="email" class="write" placeholder="Enter Your Email">
-                            <input type="submit" class="button" value="Subscribe">
+                        <div class="subscribe-form__item">
+                            <input type="email" class="subscribe-form__input" placeholder="Enter Your Email">
+                            <input type="submit" class="subscribe-form__button" value="Subscribe">
                         </div>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="footer_basement">
+        <section class="footer-basement">
             <div class="container">
-                <div class="footer_social">
-                    <div class="right">
-                        <p class="right_text">© 2021 Brand All Rights Reserved.</p>
+                <div class="footer-basement__content">
+                    <div class="footer-basement__text">
+                        <p>© 2021 Brand All Rights Reserved.</p>
                     </div>
-                    <nav class="social_icon">
-                        <a href="#" class="social-link">
+                    <nav class="footer-basement__list">
+                        <a href="#" class="footer-basement__link">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="footer-basement__link">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="footer-basement__link">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="footer-basement__link">
                             <i class="fab fa-pinterest-p"></i>
                         </a>
                     </nav>
