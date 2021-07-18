@@ -78,6 +78,7 @@ select{
     margin-left: 30px;
 }
 .sort_select{
+    cursor: pointer;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
@@ -102,7 +103,12 @@ select{
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 
     & input{
+        cursor: pointer;
         margin-right: 9px;
+
+        &:hover{
+            transform: scale(1.5)
+        }
     }
 }
 .sort__item{

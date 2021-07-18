@@ -679,6 +679,7 @@ select {
 }
 
 .sort_select {
+  cursor: pointer;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
@@ -714,7 +715,13 @@ select {
 }
 
 .check-block input {
+  cursor: pointer;
   margin-right: 9px;
+}
+
+.check-block input:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .sort__item {
