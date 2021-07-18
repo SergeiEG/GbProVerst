@@ -663,7 +663,7 @@ details > summary {
   color: #6F6E6E;
 }
 
-.filter__list ol:not(:last-child) {
+.filter__list li:not(:last-child) {
   margin-bottom: 11px;
 }
 
