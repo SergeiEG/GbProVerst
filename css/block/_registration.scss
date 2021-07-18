@@ -1,0 +1,22 @@
+.registration{
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 96px 0;
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+
+        & h5{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &--input{
+            width: 360px;
+            height: 45px;
+        }
+    }
+
+}

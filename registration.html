@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Shopping Cart</title>
+    <title>Registration</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <div class="header__item">
                     <img src="img/menu.svg" alt="menu">
                 </div>
-                <a class="header__item" href="registration.html">
+                <a class="header__item" href="#">
                     <img src="img/registration.svg" alt="registration">
                 </a>
                 <a class="header__item" href="cart.html">
@@ -44,57 +44,43 @@
     <main>
         <section class="intro">
             <div class="container intro__wrap">
-                <h2>SHOPPING CART</h2>
+                <h2>REGISTRATION</h2>
             </div>
         </section>
 
-        <section class="cart container">
-            <div class="cart__column">
-                <div class="cart__item">
-                    <figure class="cart__img">
-                        <img src="img/01.jpg" alt="img">
-                    </figure>
-                    <div class="cart__text">
-                        <h2>MANGO PEOPLE T-SHIRT</h2>
-                        <h3>Price: <span class="cart__text_red">$300</span></h3>
-                        <h3>Color: Red</h3>
-                        <h3>Size: Xl</h3>
-                        <h3>Quantity: <span class="cart__text_border">2</span></h3>
-                    </div>
+        <section class="registration container">
+            <form action="registration-form">
+                <h5>Your Name</h5>
+                <input class="registration-form__input" type="text" name="fist-name" placeholder="First Name">
+                <input class="registration-form__input" type="text" name="last-name" placeholder="Last Name">
+                <div>
+                    <p><input type="radio" name="gender" value="male">Male</p>
+                    <p><input type="radio" name="gender" value="female">Female</p>
                 </div>
-                <div class="cart__item">
-                    <figure class="cart__img">
-                        <img src="img/02.jpg" alt="img">
-                    </figure>
-                    <div class="cart__text">
-                        <h2>MANGO PEOPLE T-SHIRT</h2>
-                        <h3>Price: <span class="cart__text_red">$300</span></h3>
-                        <h3>Color: Red</h3>
-                        <h3>Size: Xl</h3>
-                        <h3>Quantity: <span class="cart__text_border">2</span></h3>
-                    </div>
-                </div>
-                <div class="cart__wrap">
-                    <button>CLEAR SHOPPING CART</button>
-                    <button>CONTINUE SHOPPING</button>
-                </div>
-            </div>
-            <div class="cart__column">
-                <form action="form" class="adress-form">
-                    <h3>SHIPPING ADRESS</h3>
-                    <input class="adress-form__input" type="text" placeholder="Bangladesh">
-                    <input class="adress-form__input" type="text" placeholder="State">
-                    <input class="adress-form__input" type="text" placeholder="Postcode / Zip">
-                    <input class="adress-form__btn" type="submit" value="GET A QUOTE">
-                </form>
-                <div class="cart__price">
-                    <h4>SUB TOTAL <span>$900</span></h4>
-                    <h3>GRAND TOTAL <span class="cart__price_red">$900</span></h3>
-                    <hr>
-                    <button>PROCEED&nbsp;TO&nbsp;CHECKOUT</button>
-                </div>
+                <h5>Login details</h5>
+                <input class="registration-form__input" type="email">
+                <input class="registration-form__input" type="password">
+                <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase
+                    letters</p>
+                <input type="submit" value="JOIN NOW">
+            </form>
+
+            <div>
+                <h3>LOYALTY HAS ITS PERKS</h3>
+                <h3>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
+                    these as soon as you join:</h3>
+                <ul>
+                    <li>15% off welcome offer</li>
+                    <li>Free shipping, returns and exchanges on all orders
+                    </li>
+                    <li>$10 off a purchase on your birthday
+                    </li>
+                    <li>Early access to products</li>
+                    <li>Exclusive offers & rewards</li>
+                </ul>
             </div>
         </section>
+
 
     </main>
 
@@ -186,7 +172,6 @@
         </section>
 
     </footer>
-
 </body>
 
 </html>

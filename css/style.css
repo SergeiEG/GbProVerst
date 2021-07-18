@@ -1011,7 +1011,6 @@ select {
 .cart__price button {
   padding: 15px 43px 16px 41px;
   max-width: 273px;
-  max-height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1148,5 +1147,37 @@ select {
   color: #4A4A4A;
   background: white;
   border: 1px solid #a4a4a4;
+}
+
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 64px 0 96px 0;
+}
+
+.registration-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration-form h5 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.registration-form input:not(:last-child) {
+  width: 360px;
+  height: 45px;
 }
 /*# sourceMappingURL=style.css.map */
