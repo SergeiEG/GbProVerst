@@ -1,3 +1,5 @@
+@import "vars";
+
 .footer{
     background-blend-mode: lighten;
     background-color: rgba(244, 244, 244, 0.7);
@@ -6,11 +8,11 @@
     background-position: center;
 
     &__info{
-        display: flex;
+        @include disflex();
         justify-content: space-between;
     }
     &__text{
-        display: flex;
+        @include disflex();
         margin: 97px 0 126px 0;
         background-image: url(../img/face.png);
         background-repeat: no-repeat;
@@ -31,23 +33,23 @@
 
         &__content{
             padding: 24px 0 24px 0;
-            display: flex;
+            @include disflex();
             justify-content: space-between;    
         }
         &__text{
-            display: flex;
+            @include disflex();
             align-self: center;
             font-size: 16px;
             line-height: 19px;
             color: #FBFBFB;
         }
         &__list{
-            display: flex;
+            @include disflex();
         }
         &__item{
             width: 32px;
             height: 32px;
-            display: flex;
+            @include disflex();
             align-items: center;
             justify-content: center;
             background-color: rgba(255, 255, 255, 1);
@@ -72,7 +74,7 @@
             color: #000000;
             font-size: 20px;
             background: rgba(255, 255, 255, 1);
-            display: flex;
+            @include disflex();
             justify-content: center;
             align-items: center;
 
@@ -102,7 +104,7 @@
         font-size: 24px;
     }
     &__item{
-        display: flex;
+        @include disflex();
     }
     &__input{
         background: #E1E1E1;

@@ -1,26 +1,23 @@
+@import "vars";
+
 .registration{
-    display: flex;
+    @include disflex();
     justify-content: space-between;
     padding: 64px 0 96px 0;
 
     &-form{
-        display: flex;
+        @include disflex();
         flex-direction: column;
         max-width: 360px;
         margin-right: 128px;
 
         & h5{
-            font-style: normal;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
+            @include text(300, 16px, 19px, #222222);
         }
         &__input{
             width: 100%;
             padding: 13px 0 16px 17px;
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 16px;
+            @include text(300, 13px, 16px, #B1B1B1);
             border: 1px solid rgba(164, 164, 164, 1);
 
             &:nth-child(even){
@@ -28,11 +25,7 @@
             }
         }
         &__text{
-            font-style: normal;
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 16px;
-            color: #B1B1B1;
+            @include text(300, 13px, 16px, #B1B1B1);
             margin: 15px 0 39px 0;
         }
         &__btn{
@@ -40,11 +33,7 @@
             width: 167px;
             height: 50px;
             background: rgba(241, 109, 127, 1);
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 17px;
-            color: #FFFFFF;
+            @include text(normal, 14px, 17px, #FFFFFF);
             text-align: left;
             padding-left: 29px;
             border: none;
@@ -60,14 +49,11 @@
             }
         }
         &__radio{
-            display: flex;
+            @include disflex();
             margin: 31px 0 33px 0;
 
             & p{
-                font-style: normal;
-                font-weight: 300;
-                font-size: 11px;
-                line-height: 13px;
+                @include text(300, 11px, 13px, #000000);
                 margin-right: 20px;
 
                 & input{
@@ -82,11 +68,7 @@
         }
     }
     &__privilege{
-        font-style: normal;
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-        color: #000000;
+        @include text(300, 24px, 29px, #000000);
 
         & p{
             margin-bottom: 21px;

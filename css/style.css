@@ -1055,6 +1055,7 @@ select {
   background: #f16d7f;
   border: none;
   cursor: pointer;
+  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
@@ -1088,11 +1089,13 @@ select {
 .cart__wrap button {
   cursor: pointer;
   padding: 17px 40px;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  background: #FFFFFF;
+  color: #000000;
   border: 1px solid #a4a4a4;
+  background-color: #FFFFFF;
 }
 
 .cart__text {
@@ -1110,6 +1113,7 @@ select {
 }
 
 .cart__text h2 {
+  font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
@@ -1118,6 +1122,7 @@ select {
 }
 
 .cart__text h3 {
+  font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 26px;
@@ -1178,6 +1183,8 @@ select {
   margin: 24px 0 57px 0;
   padding: 10px 14px 12px 15px;
   max-width: 100px;
+  font-style: normal;
+  font-weight: 300;
   font-size: 11px;
   line-height: 13px;
   color: #4A4A4A;
@@ -1212,14 +1219,17 @@ select {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+  color: #222222;
 }
 
 .registration-form__input {
   width: 100%;
   padding: 13px 0 16px 17px;
+  font-style: normal;
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
+  color: #B1B1B1;
   border: 1px solid #a4a4a4;
 }
 
@@ -1275,6 +1285,7 @@ select {
   font-weight: 300;
   font-size: 11px;
   line-height: 13px;
+  color: #000000;
   margin-right: 20px;
 }
 

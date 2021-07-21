@@ -1,15 +1,17 @@
+@import "vars";
+
 header{
     background: #222222;
     padding: 19px 0;
 }
 .header{
-    display: flex;
+    @include disflex();
     justify-content: space-between;
     &-left{
-        display: flex;
+        @include disflex();
     }
     &-right{
-        display: flex;
+        @include disflex();
     }
     &__logo{
         margin-right: 41px;
