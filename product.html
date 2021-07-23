@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <section class="header container">
+        <section class="header">
             <div class="header-left">
                 <nav>
                     <a class="header__logo" href="index.html">
@@ -46,13 +46,13 @@
 
     <main>
         <section class="intro">
-            <div class="container intro__wrap">
+            <div class="intro__wrap">
                 <h2>NEW ARRIVALS</h2>
                 <h3>HOME / MEN / <span>NEW ARRIVALS</span></h3>
             </div>
         </section>
 
-        <section class="product_info">
+        <div class="presentation">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -76,92 +76,95 @@
                     <span class="visually-hidden">Следующий</span>
                 </button>
             </div>
-            <div class="carousel_info container">
-                <h3 class="info">WOMEN COLLECTION</h3>
-                <div class="hr_line">
-                    <hr class="red_line">
-                </div>
-                <h2 class="info_heading">MOSCHINO CHEAP AND CHIC</h2>
-                <p class="info_text">Compellingly actualize fully researched processes before proactive outsourcing.
-                    Progressively&nbsp;syndicate collaborative
-                    architectures before cutting-edge services. Completely visualize parallel core competencies rather
-                    than exceptional
-                    portals.</p>
-                <h1 class="info_price">$561</h1>
-                <div class="hr_grey">
-                    <hr class="grey_line">
-                </div>
-                <div class="info_item">
-                    <select class="info_sel" name="color" id="color">
-                        <option value="ch_clr">CHOOSE COLOR</option>
-                    </select>
-                    <select class="info_sel" name="size" id="size">
-                        <option value="ch_clr">CHOOSE SIZE</option>
-                    </select>
-                    <select class="info_sel" name="quanrity" id="quanrity">
-                        <option value="ch_clr">QUANTITY</option>
-                    </select>
-                </div>
-                <div>
-                    <input class="info_btn" type="button" value="Add to Cart">
-                </div>
-            </div>
-
-        </section>
-
-        <section class="cards_block container product_card">
-            <div class="card">
-                <div class="card_item">
-                    <img src="img/3_item.jpg" alt="card">
-                    <div class="overlay">
-                        <button class="btn">Add to Cart</button>
+            <section>
+                <div class="carousel__info">
+                    <h3>WOMEN COLLECTION</h3>
+                    <span class="carousel__info--red-line"></span>
+                    <h2>MOSCHINO CHEAP AND CHIC</h2>
+                    <p>Compellingly actualize fully researched processes before proactive outsourcing.
+                        Progressively&nbsp;syndicate collaborative
+                        architectures before cutting-edge services. Completely visualize parallel core competencies
+                        rather
+                        than exceptional
+                        portals.</p>
+                    <h1>$561</h1>
+                    <span class="carousel__info--grey-line"></span>
+                    <div class="carousel__item">
+                        <select name="color" id="color">
+                            <option value="ch_clr">CHOOSE COLOR</option>
+                        </select>
+                        <select name="size" id="size">
+                            <option value="ch_clr">CHOOSE SIZE</option>
+                        </select>
+                        <select name="quanrity" id="quanrity">
+                            <option value="ch_clr">QUANTITY</option>
+                        </select>
                     </div>
+                    <button class="carousel__btn"><a href="cart.html">Add to Cart</a></button>
                 </div>
-                <div class="card_text">
-                    <h4 class="card_heading">
-                        ELLERY X M'O CAPSULE
-                    </h4>
-                    <p class="card_info">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
-                        Ellery teams up with Moda Operandi.
-                    </p>
-                    <h4 class="price">$52.00</h4>
-                </div>
-            </div>
+            </section>
+
+        </div>
+
+        <section class="cards__wrap product__card">
             <div class="card">
-                <div class="card_item">
+                <div class="card__item">
                     <img src="img/4_item.jpg" alt="card">
-                    <div class="overlay">
-                        <button class="btn">Add to Cart</button>
+                    <div class="card__overlay">
+                        <button class="card__btn"><a href="cart.html">Add to Cart</a></button>
                     </div>
                 </div>
-                <div class="card_text">
-                    <h4 class="card_heading">
-                        ELLERY X M'O CAPSULE
-                    </h4>
-                    <p class="card_info">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
-                        Ellery teams up with Moda Operandi.
-                    </p>
-                    <h4 class="price">$52.00</h4>
+                <div class="card__text">
+                    <a href="product.html">
+                        <h4>
+                            ELLERY X M'O CAPSULE
+                        </h4>
+                        <p>
+                            Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                            Ellery teams up with Moda Operandi.
+                        </p>
+                        <span>$52.00</span>
+                    </a>
                 </div>
             </div>
             <div class="card">
-                <div class="card_item">
-                    <img src="img/6_item.jpg" alt="card">
-                    <div class="overlay">
-                        <button class="btn">Add to Cart</button>
+                <div class="card__item">
+                    <img src="img/3_item.jpg" alt="card">
+                    <div class="card__overlay">
+                        <button class="card__btn"><a href="cart.html">Add to Cart</a></button>
                     </div>
                 </div>
-                <div class="card_text">
-                    <h4 class="card_heading">
-                        ELLERY X M'O CAPSULE
-                    </h4>
-                    <p class="card_info">
-                        Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
-                        Ellery teams up with Moda Operandi.
-                    </p>
-                    <h4 class="price">$52.00</h4>
+                <div class="card__text">
+                    <a href="product.html">
+                        <h4>
+                            ELLERY X M'O CAPSULE
+                        </h4>
+                        <p>
+                            Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                            Ellery teams up with Moda Operandi.
+                        </p>
+                        <span>$52.00</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__item">
+                    <img src="img/6_item.jpg" alt="card">
+                    <div class="card__overlay">
+                        <button class="card__btn"><a href="cart.html">Add to Cart</a></button>
+                    </div>
+                </div>
+                <div class="card__text">
+                    <a href="product.html">
+                        <h4>
+                            ELLERY X M'O CAPSULE
+                        </h4>
+                        <p>
+                            Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym
+                            Ellery teams up with Moda Operandi.
+                        </p>
+                        <span>$52.00</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -170,46 +173,42 @@
 
     <footer>
         <section class="footer">
-            <div class="container">
-                <div class="footer__info">
-                    <aside class="footer__text">
-                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                            condimentum“</p>
-                    </aside>
-                    <form class="subscribe-form" action="form">
-                        <h3><span>SUBSCRIBE</span><br> OUR NEWLETTER AND
-                            PROMOTION</h3>
-                        <div class="subscribe-form__item">
-                            <input type="email" class="subscribe-form__input" placeholder="Enter Your Email">
-                            <input type="submit" class="subscribe-form__button" value="Subscribe">
-                        </div>
-                    </form>
-                </div>
+            <div class="footer__info">
+                <aside class="footer__text">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                        condimentum“</p>
+                </aside>
+                <form class="subscribe-form" action="form">
+                    <h3><span>SUBSCRIBE</span><br> OUR NEWLETTER AND
+                        PROMOTION</h3>
+                    <div class="subscribe-form__item">
+                        <input type="email" class="subscribe-form__input" placeholder="Enter Your Email">
+                        <input type="submit" class="subscribe-form__button" value="Subscribe">
+                    </div>
+                </form>
             </div>
         </section>
 
         <section class="footer-basement">
-            <div class="container">
-                <div class="footer-basement__content">
-                    <div class="footer-basement__text">
-                        <p>© 2021 Brand All Rights Reserved.</p>
-                    </div>
-                    <nav class="footer-basement__list">
-                        <a href="#" class="footer-basement__link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="footer-basement__link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-basement__link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="footer-basement__link">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                    </nav>
+            <div class="footer-basement__content">
+                <div class="footer-basement__text">
+                    <p>© 2021 Brand All Rights Reserved.</p>
                 </div>
-            </div>
+                <nav class="footer-basement__list">
+                    <a href="#" class="footer-basement__link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer-basement__link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer-basement__link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer-basement__link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </nav>
+            </div>>
         </section>
 
     </footer>

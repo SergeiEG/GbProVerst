@@ -23,8 +23,7 @@
 
         & p{
             margin-top: 126px;
-            font-size: 20px;
-            line-height: 24px;
+            @include text(normal, 20px, 24px, #222224);
             text-align: center;
         }
     }
@@ -34,14 +33,12 @@
         &__content{
             padding: 24px 0 24px 0;
             @include disflex();
-            justify-content: space-between;    
+            justify-content: space-between;   
+            align-items: center; 
         }
         &__text{
             @include disflex();
-            align-self: center;
-            font-size: 16px;
-            line-height: 19px;
-            color: #FBFBFB;
+            @include text(normal, 16px, 19px, #FBFBFB);
         }
         &__list{
             @include disflex();
@@ -93,9 +90,7 @@
     margin: 150px 0 156px 0;
 
     & h3{
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 167.2%;
+        @include text(normal, 18px, 30px, #222224);
         text-align: center;
         margin-bottom: 32px;
     }
@@ -113,9 +108,7 @@
         border-radius: 50px 0 0 50px;
         border: 0px;
         padding-left: 22px;
-        font-size: 14px;
-        line-height: 17px;
-        color: #222224;
+        @include text(normal, 14px, 17px, #222224);
         opacity: 0.67;
     }
     &__button{
@@ -125,8 +118,6 @@
         height: 49px;
         border-radius: 0 50px 50px 0;
         border: 0px;
-        font-size: 14px;
-        line-height: 17px;
-        color: #FFFFFF;
+        @include text(normal, 14px, 17px, #FFFFFF);
     }
 }

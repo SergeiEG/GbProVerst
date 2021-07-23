@@ -1,9 +1,12 @@
-.catalog_block{
+@import "vars";
+
+.catalog{
     margin: 51px 0 97px 0;
-}
-.choice{
-    display: flex;
-    margin-bottom: 64px;
+
+    &__top{
+        display: flex;
+        margin-bottom: 64px;
+    }
 }
 .filter{
     left: 16px;
@@ -13,62 +16,63 @@
     outline: none;
     border: none;
     background: #FFFFFF;
-}
-.filter_content{
-    position: absolute;
-    background: #FFFFFF;
-    width: 360px;
-    box-shadow: 16px 25px 23px 2px rgba(0, 0, 0, 0.21);
-    padding: 16px 0 0 16px;
+
+    &__content{
+        position: absolute;
+        background: #FFFFFF;
+        width: 360px;
+        box-shadow: 16px 25px 23px 2px rgba(0, 0, 0, 0.21);
+        padding: 16px 0 0 16px;
+
+        & > details > summary{
+            display: block;
+            width: 327px;
+            color: #EF5B70;
+            outline: none;
+            border-left: 5px solid #EF5B70;
+            border-bottom: 1px solid #EBEBEB;
+            padding: 11px;
+            margin-bottom: 18px;
+        }
+    }
+    & summary{
+        @include text(600, 14px, 17px, #000000);
+    }
+    & svg{
+        fill: black;
+    }
+    &[open]{
+        z-index: 2;
+        left: 0;
+        top: 0;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+        &>summary{
+            color: #EF5B70;
+            outline: none;
+            border: none;
+            padding: 13px 0 0 16px;
+
+            & svg{
+                fill: #EF5B70;
+            }
+        }
+    }
+    &__list{
+        list-style: none;
+        margin: 24px 0 24px 34px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+
+        & li:not(:last-child){
+            margin-bottom: 11px;
+        }
+    }
 }
 details > summary{
     list-style: none;
-}
-.filter summary{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-}
-.filter svg{
-    fill: black;
-}
-.filter[open] {
-    z-index: 2;
-    left: 0;
-    top: 0;
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-}
-.filter[open]>summary {
-    color: #EF5B70;
-    outline: none;
-    border: none;
-    padding: 13px 0 0 16px;
-}
-.filter[open] > summary svg{
-    fill: #EF5B70;
-}
-.filter_content > details > summary{
-    display: block;
-    width: 327px;
-    color: #EF5B70;
-    outline: none;
-    border-left: 5px solid #EF5B70;
-    border-bottom: 1px solid #EBEBEB;
-    padding: 11px;
-    margin-bottom: 18px;
-}
-.filter__list{
-    list-style: none;
-    margin: 24px 0 24px 34px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: #6F6E6E;
-}
-.filter__list li:not(:last-child){
-    margin-bottom: 11px;
 }
 select{
     border: 1px solid white;
@@ -76,43 +80,45 @@ select{
 .sort{
     display: flex;
     margin-left: 30px;
-}
-.sort_select{
-    cursor: pointer;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: #6F6E6E;
-}
-.sort_select:not(:last-child){
-    margin-right: 28px;
+
+    &__select{
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+
+        &:not(:last-child){
+            margin-right: 28px;
+        }
+    }
+    &__checkbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 9px 0 12px 9px;
+        width: 79px;
+        height: 103px;
+        position: absolute;
+        z-index: 2;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+        & input{
+            cursor: pointer;
+            margin-right: 9px;
+
+            &:hover{
+                transform: scale(1.5)
+            }
+        }
+    }
+    &__item{
+        position: relative;
+    }
 }
 .card:nth-child(-n+6){
     margin-bottom: 30px;
-}
-.check-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 9px 0 12px 9px;
-    width: 79px;
-    height: 103px;
-    position: absolute;
-    z-index: 2;
-    background: #FFFFFF;
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-
-    & input{
-        cursor: pointer;
-        margin-right: 9px;
-
-        &:hover{
-            transform: scale(1.5)
-        }
-    }
-}
-.sort__item{
-    position: relative;
 }
 .card_pagination{
     display: flex;
