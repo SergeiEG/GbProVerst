@@ -275,6 +275,7 @@ section {
 header {
   background: #222222;
   padding: 19px 10px;
+  position: relative;
 }
 
 .header {
@@ -290,12 +291,18 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo {
@@ -304,6 +311,7 @@ header {
 }
 
 .header__item {
+  cursor: pointer;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -314,10 +322,81 @@ header {
   margin-right: 33px;
 }
 
-.header__search-form {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.header__wrap {
+  position: relative;
+  padding: 37px 0 0 34px;
+  overflow: hidden;
+}
+
+.header__wrap ul {
+  list-style-type: none;
+}
+
+.header__wrap label {
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.header__wrap--strong {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.header__wrap--red {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-bottom: 12px;
+}
+
+.header__wrap li:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.header__wrap li:last-child {
+  margin-bottom: 20px;
+}
+
+.header__wrap a {
+  text-decoration: none;
+  color: #6F6E6E !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__menu {
+  top: 100%;
+  right: 0;
+  position: absolute;
+  width: 232px;
+  height: 764px;
+  z-index: 2;
+  background: white;
+  -webkit-box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+
+#toggle:checked ~ .header__menu {
+  display: block;
+}
+
+#toggle:not(:checked) ~ .header__menu {
+  display: none;
 }
 
 .footer {
