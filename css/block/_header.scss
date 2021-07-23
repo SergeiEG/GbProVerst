@@ -84,3 +84,8 @@ header{
 #toggle:not(:checked) ~ .header__menu{
     display: none;
 }
+@media(max-width:667px){
+    .hidden{
+        display: none;
+    }
+}

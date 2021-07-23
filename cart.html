@@ -71,10 +71,10 @@
                         </ul>
                     </div>
                 </div>
-                <a class="header__item" href="registration.html">
+                <a class="header__item hidden" href="registration.html">
                     <img src="img/registration.svg" alt="registration">
                 </a>
-                <a class="header__item" href="cart.html">
+                <a class="header__item hidden" href="cart.html">
                     <img src="img/basket.svg" alt="basket">
                 </a>
             </nav>
@@ -92,7 +92,10 @@
             <div class="cart__column">
                 <div class="cart__item">
                     <figure class="cart__img">
-                        <img src="img/01.jpg" alt="img">
+                        <picture>
+                            <source media="(max-width: 667px)" srcset="img/01_s.jpg">
+                            <img src="img/01.jpg" alt="img">
+                        </picture>
                     </figure>
                     <div class="cart__text">
                         <h2>MANGO PEOPLE T-SHIRT</h2>
@@ -104,7 +107,10 @@
                 </div>
                 <div class="cart__item">
                     <figure class="cart__img">
-                        <img src="img/02.jpg" alt="img">
+                        <picture>
+                            <source media="(max-width: 667px)" srcset="img/02_s.jpg">
+                            <img src="img/02.jpg" alt="img">
+                        </picture>
                     </figure>
                     <div class="cart__text">
                         <h2>MANGO PEOPLE T-SHIRT</h2>
@@ -119,7 +125,7 @@
                     <button>CONTINUE SHOPPING</button>
                 </div>
             </div>
-            <div class="cart__column">
+            <div class="cart__column alignment">
                 <form action="form" class="adress-form">
                     <h3>SHIPPING ADRESS</h3>
                     <input class="adress-form__input" type="text" placeholder="Bangladesh">
