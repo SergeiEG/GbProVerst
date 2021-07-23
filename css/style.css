@@ -330,6 +330,7 @@ header {
 
 .header__wrap ul {
   list-style-type: none;
+  padding-left: 21px;
 }
 
 .header__wrap label {
