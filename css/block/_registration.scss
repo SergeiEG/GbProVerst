@@ -3,13 +3,13 @@
 .registration{
     @include disflex();
     justify-content: space-between;
-    padding: 64px 0 96px 0;
+    padding: 64px 16px 96px 16px;
 
     &-form{
         @include disflex();
         flex-direction: column;
         max-width: 360px;
-        margin-right: 128px;
+        margin-right: 11%;
 
         & h5{
             @include text(300, 16px, 19px, #222222);
@@ -85,5 +85,23 @@
             }
         }
     }
+}
+@media(max-width:1024px){
+    .registration-form{
+        margin-right: 22px;
+    }
+    .registration__privilege{
+        @include text(300, 16px, 19px, #000000);
+    }
+}
+@media(max-width:667px){
+    .registration{
+        flex-direction: column;
+        align-items: center;
 
+        &-form{
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    }
 }

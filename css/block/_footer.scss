@@ -9,7 +9,7 @@
 
     &__info{
         @include disflex();
-        justify-content: space-between;
+        justify-content: space-around;
     }
     &__text{
         @include disflex();
@@ -31,7 +31,7 @@
         background: rgba(34, 34, 36, 1);
 
         &__content{
-            padding: 24px 0 24px 0;
+            padding: 24px 32px;
             @include disflex();
             justify-content: space-between;   
             align-items: center; 
@@ -97,7 +97,7 @@
     & span{
         font-weight: bold;
         font-size: 24px;
-    }
+    }    
     &__item{
         @include disflex();
     }
@@ -119,5 +119,51 @@
         border-radius: 0 50px 50px 0;
         border: 0px;
         @include text(normal, 14px, 17px, #FFFFFF);
+    }
+}
+@media(max-width:1024px){
+    .footer{
+        background-image: url(../img/back_footer2.jpg);
+
+        &__info{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text{
+            margin: 53px 0 48px 0;
+        }
+    } 
+    .subscribe-form{
+        margin: 0px 0 140px 0;
+    }
+}
+@media(max-width:667px){
+    .footer__text{
+        margin: 53px 0 59px 0;
+
+        & p{
+            @include text(normal, 18px, 22px, #222224);
+        }
+    }
+    .subscribe-form{
+        margin: 0px 0 109px 0;
+
+        & h3{
+            @include text(normal, 14px, 21px, #222224)
+        
+        }        
+        & span{
+            @include text(bold, 24px, 37px, #222224)
+        }
+    }
+    .footer-basement__content{
+        padding: 43px 0 24px 0;
+        flex-direction: column;
+    }
+    .footer-basement__text{
+        order: 2;
+    }
+    .footer-basement__list{
+        margin-bottom: 25px;
     }
 }

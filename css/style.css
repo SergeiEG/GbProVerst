@@ -411,9 +411,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .footer__text {
@@ -444,7 +443,7 @@ header {
 }
 
 .footer-basement__content {
-  padding: 24px 0 24px 0;
+  padding: 24px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,6 +582,72 @@ header {
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    background-image: url(../img/back_footer2.jpg);
+  }
+  .footer__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__text {
+    margin: 53px 0 48px 0;
+  }
+  .subscribe-form {
+    margin: 0px 0 140px 0;
+  }
+}
+
+@media (max-width: 667px) {
+  .footer__text {
+    margin: 53px 0 59px 0;
+  }
+  .footer__text p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #222224;
+  }
+  .subscribe-form {
+    margin: 0px 0 109px 0;
+  }
+  .subscribe-form h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #222224;
+  }
+  .subscribe-form span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 37px;
+    color: #222224;
+  }
+  .footer-basement__content {
+    padding: 43px 0 24px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-basement__text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .footer-basement__list {
+    margin-bottom: 25px;
+  }
 }
 
 .cards__wrap {
@@ -907,6 +972,7 @@ ul.pagination li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 16px;
 }
 
 .intro__wrap h2 {
@@ -929,6 +995,15 @@ ul.pagination li a:hover {
 .intro__wrap span {
   font-weight: bold;
   color: #F16D7F;
+}
+
+@media (max-width: 667px) {
+  .intro__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .presentation {
@@ -1336,7 +1411,7 @@ ul.pagination li a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 64px 0 96px 0;
+  padding: 64px 16px 96px 16px;
 }
 
 .registration-form {
@@ -1348,7 +1423,7 @@ ul.pagination li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 360px;
-  margin-right: 128px;
+  margin-right: 11%;
 }
 
 .registration-form h5 {
@@ -1459,5 +1534,34 @@ ul.pagination li a:hover {
 
 .registration__privilege li:not(:last-child) {
   margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+  .registration-form {
+    margin-right: 22px;
+  }
+  .registration__privilege {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+  }
+}
+
+@media (max-width: 667px) {
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .registration-form {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
