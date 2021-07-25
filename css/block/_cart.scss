@@ -1,0 +1,222 @@
+@import "vars";
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    &__column{
+        display: flex;
+        flex-direction: column;
+        margin: 96px 0 128px 0;
+    }
+    &__price{
+        width: 360px;
+        height: 214px;
+        background: rgba(245, 243, 243, 1);
+        display: flex;
+        flex-direction: column;
+
+        & h4{
+            display: flex;
+            align-self: flex-end;
+            margin: 39px 34px 12px 0;
+            @include text(normal, 11px, 13px, #4A4A4A);
+            width: 108px;
+            justify-content: space-between;
+        }
+        & h3{
+            display: flex;
+            align-self: flex-end;
+            margin: 0 37px 21px 0;
+            @include text(300, 16px, 19px, #222222);
+            width: 170px;
+            justify-content: space-between;
+        }
+        &_red{
+            font-weight: bold;
+            color: #F16D7F;
+        }
+        & hr{
+            width: 275px;
+            display: flex;
+            align-self: center;
+            border: 1px solid #E2E2E2;
+            margin-bottom: 17px;
+        }
+        & button{
+            padding: 15px 43px 16px 41px;
+            max-width: 273px;
+            display: flex;
+            align-self: center;
+            background: rgba(241, 109, 127, 1);
+            border: none;
+            cursor: pointer;
+            @include text(300, 16px, 19px, #FFFFFF);
+        }
+    }
+    &__item{
+        display: flex;
+        max-width: 652px;
+        max-height: 306px;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+
+        &:first-child{
+            margin-bottom: 40px;
+        }
+    }
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 72px;
+
+        & button{
+            cursor: pointer;
+            padding: 17px 40px;
+            @include text(normal, 14px, 17px, #000000);
+            border: 1px solid rgba(164, 164, 164, 1);
+            background-color: #FFFFFF;
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        padding: 22px 97px 0 31px;
+        position: relative;
+
+        & h2{
+            @include text(normal, 24px, 29px, #222222);
+            margin-bottom: 42px;
+        }
+        & h3{
+            @include text(normal, 22px, 26px, #575757);
+        }
+        & h3:not(:last-child){
+            margin-bottom: 6px;
+        }
+        &_red{
+            color: #EF5B70;
+        }
+        &_border{
+            padding: 1px 16px;
+            border: 1px solid #EAEAEA;
+            margin-left: 40px;
+        }
+    }
+}
+.close-button{
+    position: absolute;
+    cursor: pointer;
+    top: 28px;
+    right: 22px;
+}
+.adress-form{
+    display: flex;
+    flex-direction: column;
+
+    & h3{
+        @include text(300, 16px, 19px, #222222);
+    }
+
+    &__input{
+        width: 360px;
+        height: 45px;
+        margin-top: 20px;
+        @include text(300, 13px, 16px, #222222);
+        padding: 13px 0 16px 17px;
+        border: 1px solid rgba(164, 164, 164, 1);
+
+        &:first-child{
+            color: #B1B1B1;
+        }
+    }
+    &__btn{
+        cursor: pointer;
+        margin: 24px 0 57px 0;
+        padding: 10px 14px 12px 15px;
+        max-width: 100px;
+        @include text(300, 11px, 13px, #4A4A4A);
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(164, 164, 164, 1)
+    }
+}
+@media(max-width:1060px){
+    .cart{
+        flex-direction: column;
+        padding: 59px 18px 128px 16px;
+
+        &__column{
+            margin: 0;
+
+            &:first-child{
+                margin-bottom: 64px;
+            }
+        }
+        &__item{
+            max-width: 100%;
+        }
+        &__text{
+            width: 100%;
+        }
+        &__wrap{
+            justify-content: space-around;
+            margin-top: 62px;
+        }
+    }
+    .adress-form{
+        margin-right: 15px;
+    }
+    .alignment{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media(max-width:667px){
+    .cart{
+        padding: 38px 9px 96px 9px;
+
+        &__item{
+            max-height: 188px;
+        }
+        &__column:first-child{
+            margin-bottom: 48px;
+        }
+        &__text{
+            padding: 13px 53px 37px 17px;
+
+            & h2{
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 25px;
+            }
+            & h3{
+                font-size: 14px;
+                line-height: 17px;
+            }
+            & h3:not(:last-child){
+                margin-bottom: 4px;
+            }
+
+            &_border{
+                padding: 1px 9px;
+                margin-left: 15px;
+            }
+        }
+        &__wrap{
+            margin-top: 30px;
+    
+            & button{
+                padding: 9px 17px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+    .alignment{
+        flex-direction: column;
+        align-items: center
+    }
+    .adress-form{
+        margin-right: 0;
+    }
+} 

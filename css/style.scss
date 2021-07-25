@@ -1,0 +1,315 @@
+@import "block/vars";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+section{
+    padding: 0 calc(50vw - 580px);
+}
+.top{
+    height: 764px;
+    background: #F1E4E6;
+
+    &__content{
+        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-image: url(../img/man.png);
+        background-repeat: no-repeat;
+        background-position: -218px bottom;
+    }
+    &__text{
+        max-width: 405px;
+        padding-left: 16px;
+        border-left: 12px solid #F16D7F;
+
+        & h1{
+            @include text(bold, 32px, 38px, #222222);
+        }
+        &--strong{
+            @include text(900, 48px, 58px, #222222);
+        }
+        &--red{
+            @include text(bold, 32px, 38px, #F16D7F);
+        }
+    }
+
+}
+.category{
+    margin: 65px 0 96px 0;
+
+    &__wrap{
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item{
+        width: 100%;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:not(:last-child){
+            width: 31%;
+            height: 260px;
+            margin: 0 0 2.5% 0;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        background-blend-mode: multiply;
+        background-color: rgba(33, 22, 22, 0.7);
+        background-size: cover;
+    }
+    &__text{
+        position: absolute;
+        max-width: 160px;
+
+        & h3{
+            text-align: center;
+            @include text(normal, 16px, 19px, #FFFFFF);
+        }
+        &--red{
+            @include text(bold, 24px, 29px, #F16D7F);
+        }
+    }
+}
+.for_women{
+    background-image: url(../img/for_women.jpg);
+    background-repeat: no-repeat;
+}
+.for_man{
+    background-image: url(../img/for_men.jpg);
+    background-repeat: no-repeat;
+}
+.for_kids{
+    background-image: url(../img/for_kids.jpg);
+    background-repeat: no-repeat;
+}
+.accesories{
+    background-image: url(../img/accesories.jpg);
+    background-repeat: no-repeat;
+}
+.fetured{
+    margin-bottom: 96px;
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 48px; 
+        text-align: center;
+
+        & h3{
+            @include text(normal, 30px, 36px, #222222);
+            margin-bottom: 6px;
+        }
+        & p{
+            @include text(normal, 14px, 17px, #9F9F9F);
+        }
+    }
+}
+.product{
+    display: flex;
+    justify-content: center;
+
+    &__button{
+        @include text(normal, 16px, 19px, #F26376);
+        text-decoration: none;
+        padding: 14px 38px;
+        border: 1px solid #FF6A6A;
+
+        &:hover{
+            color: rgba(255, 255, 255, 1);
+            background: rgba(241, 109, 127, 1); 
+        }
+    }
+}
+.advantages{
+    background: rgba(34, 34, 36, 1);
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 103px 10px 104px 10px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & h3{
+            @include text(normal, 19px, 24px, #FBFBFB);
+            margin: 60px 0 16px 0;
+        }
+        & p{
+            max-width: 360px;
+            text-align: center;
+            @include text(300, 13.972px, 17px, #FBFBFB);
+        }
+    }
+}
+.truck{
+    background-image: url(../img/car.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.sale{
+    background-image: url(../img/sale.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.crown{
+    background-image: url(../img/crown.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+@media(max-width:1024px){
+    .top{
+        height: 368px;
+    
+        &__content{
+            background-image: url(../img/man_s.png);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+        &__text{
+            & h1{
+                @include text(bold, 24px, 29px, #222222);
+            }
+            &--strong{
+                @include text(900, 44px, 53px, #222222);
+            }
+            &--red{
+                @include text(bold, 24px, 29px, #F16D7F);
+            }
+        }
+    }
+    .category{
+        margin: 20px 0 155px 0;
+
+        &__item{
+            height: 116px;
+    
+            &:not(:last-child){
+                height: 167px;
+                margin: 0 0 2.5% 0;
+            }
+        }
+    }
+    .for_women{
+        background-image: url(../img/for_women_pad.jpg);
+    }
+    .for_man{
+        background-image: url(../img/for_men_pad.jpg);
+    }
+    .for_kids{
+        background-image: url(../img/for_kids_pad.jpg);
+    }
+    .accesories{
+        background-image: url(../img/accesories_pad.jpg);
+    }
+    .fetured{
+        margin-bottom: 65px;
+
+        &__info{
+            margin-bottom: 73px; 
+
+        }
+    }
+    .advantages__info{
+        flex-direction: column;
+        padding: 48px 0 64px 0;
+    }
+    .advantages__item:not(:last-child){
+        margin-bottom: 48px;
+    }
+}  
+@media(max-width:667px){
+    .top{
+        height: 363px;
+    
+        &__content{
+            background-image: none;
+            justify-content: center;
+
+        }
+        &__text{
+            max-width: 263px;
+
+            & h1{
+                @include text(bold, 20px, 24px, #222222);
+            }
+            &--strong{
+                @include text(900, 38px, 46px, #222222);
+            }
+            &--red{
+                @include text(bold, 20px, 24px, #F16D7F);
+            }
+        }
+    }
+    .category{
+        margin: 64px 0;
+
+        &__wrap{
+            padding: 0 16px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item{
+            width: 100%;
+            height: 111px;
+    
+            &:not(:last-child){
+                width: 100%;
+                height: 247px;
+                margin: 0 0 32px 0;
+            }
+        }
+    }
+    .for_women{
+        background-image: url(../img/for_women_ph.jpg);
+    }
+    .for_man{
+        background-image: url(../img/for_men_ph.jpg);
+    }
+    .for_kids{
+        background-image: url(../img/for_kids_ph.jpg);
+    }
+    .accesories{
+        background-image: url(../img/accesories_ph.jpg);
+    }
+    .fetured{
+        margin-bottom: 97px;
+
+        &__info{
+            margin-bottom: 65px; 
+
+        }
+    }
+    .advantages__info{
+        flex-direction: column;
+        padding: 48px 0 81px 0;
+    }
+} 
+@import "block/header";
+@import "block/footer";
+@import "block/card";
+@import "block/catalog";
+@import "block/intro";
+@import "block/product";
+@import "block/cart";
+@import "block/registration";
