@@ -4,6 +4,7 @@
     margin: 51px 0 97px 0;
 
     &__top{
+        padding: 0 10px;
         display: flex;
         margin-bottom: 64px;
     }
@@ -27,7 +28,7 @@
         & > details > summary{
             display: block;
             width: 327px;
-            color: #EF5B70;
+            @include text(600, 14px, 17px, #EF5B70);
             outline: none;
             border-left: 5px solid #EF5B70;
             border-bottom: 1px solid #EBEBEB;
@@ -35,7 +36,7 @@
             margin-bottom: 18px;
         }
     }
-    & summary{
+    &__header{
         @include text(600, 14px, 17px, #000000);
     }
     & svg{
@@ -61,10 +62,7 @@
     &__list{
         list-style: none;
         margin: 24px 0 24px 34px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: #6F6E6E;
+        @include text(normal, 14px, 17px, #6F6E6E);
 
         & li:not(:last-child){
             margin-bottom: 11px;
@@ -73,20 +71,19 @@
 }
 details > summary{
     list-style: none;
+    min-width: 43px;
 }
 select{
     border: 1px solid white;
 }
 .sort{
     display: flex;
+    align-items: center;
     margin-left: 30px;
 
     &__select{
         cursor: pointer;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: #6F6E6E;
+        @include text(normal, 14px, 17px, #6F6E6E);
 
         &:not(:last-child){
             margin-right: 28px;
@@ -117,14 +114,6 @@ select{
         position: relative;
     }
 }
-.card:nth-child(-n+6){
-    margin-bottom: 30px;
-}
-.card_pagination{
-    display: flex;
-    justify-content: center;
-    margin-top: 48.5px;
-}
 ul.pagination {
     display: inline-block;
     padding: 0;
@@ -138,14 +127,55 @@ ul.pagination li a {
     text-decoration: none;
     color: black;
     float: left;
-    padding: 8px 16px;
+    padding: 14px 10px;
     text-decoration: none;
     border: none;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: #C4C4C4;
+    @include text(300, 16px, 19px, #C4C4C4);
 }
 ul.pagination li a:hover{
     color: #EF5B70;
 }
+@media(max-width:1024px){
+    .catalog{
+        margin: 24px 0 64px 0;
+    
+        &__top{
+            margin-bottom: 40px;
+            justify-content: space-between;
+        }
+    }
+    .filter{
+        left: 0;
+    }
+    .carve{
+        display: none;
+    }
+}
+@media(max-width:667px){
+    .catalog__top{
+        margin-bottom: 32px;
+    }
+    .filter{
+
+        &__header{
+            font: 0/0 serif;
+            text-shadow: none;
+            color: transparent;
+        }
+        & svg{
+            width: 38px;
+            height: 25px;
+        }
+    }
+    .sort{
+        margin-left: 0;
+    
+        &__select{
+            @include text(normal, 12px, 14px, #6F6E6E);
+    
+            &:not(:last-child){
+                margin-right: 23px;
+            } 
+        }
+    }  
+}   

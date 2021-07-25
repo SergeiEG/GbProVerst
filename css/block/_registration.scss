@@ -3,7 +3,7 @@
 .registration{
     @include disflex();
     justify-content: space-between;
-    padding: 64px 16px 96px 16px;
+    padding: 64px 10px 96px 10px;
 
     &-form{
         @include disflex();

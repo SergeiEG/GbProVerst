@@ -1,9 +1,11 @@
 @import "vars";
 
 .cards__wrap{
+    padding: 0 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 1.5%;
 }
 .card{
     width: 360px;
@@ -11,9 +13,11 @@
     background: rgba(248, 248, 248, 1);
     display: flex;
     flex-direction: column;
+    margin-right: 2%;
+    margin-bottom: 2%;
 
-    &:nth-child(-n+3){
-        margin-bottom: 30px;
+    &:nth-child(3n){
+        margin-right: 0;
     }
     &__item{
         cursor: pointer;
@@ -75,5 +79,36 @@
         & span{
             @include text(normal, 16px, 19px, #F16D7F);
         }
+    }
+    &__pagination{
+        display: flex;
+        justify-content: center;
+        margin-top: 28.5px;
+    }
+}
+@media(max-width:1155px){
+   .card:nth-child(3n){
+        margin-right: 2vw;
+        margin-bottom: 2vw;
+   } 
+   .card:nth-child(2n){
+        margin-right: 0;
+    }
+    .card__pagination{
+        margin-top: 24px;
+    }
+}
+@media(max-width:756px){
+    .card{
+        margin-right: 0;
+        margin-bottom: 16px;
+
+        &:nth-child(3n){
+            margin-right: 0;
+            margin-bottom: 16px;
+       } 
+    }
+    .cards__wrap{
+        margin-bottom: 24px;
     }
 }

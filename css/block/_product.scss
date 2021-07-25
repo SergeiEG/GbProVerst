@@ -11,8 +11,9 @@
     background: rgba(247, 247, 247, 1);
 }
 .carousel-control-prev{
+    position: absolute;
     left: 5px;
-    margin-top: 30vh;
+    top: 40%;
     width: 47px;
     height: 47px;
     background: rgba(42, 42, 42, 0.15);
@@ -26,8 +27,9 @@
     }
 }
 .carousel-control-next{
+    position: absolute;
     right: 5px;
-    margin-top: 30vh;
+    top: 40%;
     width: 47px;
     height: 47px;
     background: rgba(42, 42, 42, 0.15);
@@ -114,4 +116,56 @@
 }
 .product__card{
     margin: 664px 0 128px 0;
+}
+@media(max-width:1140px){
+    .carousel{
+    
+        &__info{
+            position: none;
+            z-index: 1;
+            width: 100%;
+            margin-top: 0;
+        }
+    } 
+    .product__card{
+        margin: 730px 0 128px 0;
+    }
+    .carve{
+        display: none;
+    }
+}
+@media(max-width:667px){
+    .carousel{
+    
+        &__info{
+            
+            & p{
+                line-height: 20px;
+                max-width: 326px;
+            }
+            & h1{
+                line-height: 31px;
+                margin-bottom: 32px;
+            }
+            &--grey-line{
+                margin-bottom: 50px;
+                width: 175px;
+            }
+        }
+        &__item{
+            margin-bottom: 65px;
+    
+            & select{
+                font-size: 10px;
+                line-height: 12px;
+    
+                &:not(last-child){
+                    margin-right: 22px;
+                }
+            }
+        }
+    }
+    .product__card{
+        margin: 664px 0 64px 0;
+    }
 }

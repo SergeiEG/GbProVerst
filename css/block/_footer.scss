@@ -31,7 +31,7 @@
         background: rgba(34, 34, 36, 1);
 
         &__content{
-            padding: 24px 32px;
+            padding: 24px 10px;
             @include disflex();
             justify-content: space-between;   
             align-items: center; 
@@ -125,6 +125,9 @@
     .footer{
         background-image: url(../img/back_footer2.jpg);
 
+        &-basement__content{
+            padding: 24px 32px;
+        }
         &__info{
             flex-direction: column;
             align-items: center;

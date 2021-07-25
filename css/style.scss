@@ -9,13 +9,14 @@ body{
     font-family: 'Lato', sans-serif;
 }
 section{
-    padding: 0 calc(50vw - 570px);
+    padding: 0 calc(50vw - 580px);
 }
 .top{
     height: 764px;
     background: #F1E4E6;
 
     &__content{
+        padding: 0 10px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -45,6 +46,7 @@ section{
     margin: 65px 0 96px 0;
 
     &__wrap{
+        padding: 0 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -52,15 +54,15 @@ section{
     &__item{
         width: 100%;
         height: 180px;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
 
         &:not(:last-child){
-            width: 360px;
+            width: 31%;
             height: 260px;
-            margin: 0 0 30px 0;
+            margin: 0 0 2.5% 0;
         }
     }
     &__img{
@@ -68,6 +70,7 @@ section{
         height: 100%;
         background-blend-mode: multiply;
         background-color: rgba(33, 22, 22, 0.7);
+        background-size: cover;
     }
     &__text{
         position: absolute;
@@ -84,15 +87,19 @@ section{
 }
 .for_women{
     background-image: url(../img/for_women.jpg);
+    background-repeat: no-repeat;
 }
 .for_man{
     background-image: url(../img/for_men.jpg);
+    background-repeat: no-repeat;
 }
 .for_kids{
     background-image: url(../img/for_kids.jpg);
+    background-repeat: no-repeat;
 }
 .accesories{
     background-image: url(../img/accesories.jpg);
+    background-repeat: no-repeat;
 }
 .fetured{
     margin-bottom: 96px;
@@ -116,7 +123,6 @@ section{
 .product{
     display: flex;
     justify-content: center;
-    margin-top: 49px;
 
     &__button{
         @include text(normal, 16px, 19px, #F26376);
@@ -136,7 +142,7 @@ section{
     &__info{
         display: flex;
         justify-content: space-between;
-        padding: 103px 0 104px 0;
+        padding: 103px 10px 104px 10px;
     }
     &__item{
         display: flex;
@@ -170,6 +176,135 @@ section{
     background-repeat: no-repeat;
     background-position: top;
 }
+@media(max-width:1024px){
+    .top{
+        height: 368px;
+    
+        &__content{
+            background-image: url(../img/man_s.png);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+        &__text{
+            & h1{
+                @include text(bold, 24px, 29px, #222222);
+            }
+            &--strong{
+                @include text(900, 44px, 53px, #222222);
+            }
+            &--red{
+                @include text(bold, 24px, 29px, #F16D7F);
+            }
+        }
+    }
+    .category{
+        margin: 20px 0 155px 0;
+
+        &__item{
+            height: 116px;
+    
+            &:not(:last-child){
+                height: 167px;
+                margin: 0 0 2.5% 0;
+            }
+        }
+    }
+    .for_women{
+        background-image: url(../img/for_women_pad.jpg);
+    }
+    .for_man{
+        background-image: url(../img/for_men_pad.jpg);
+    }
+    .for_kids{
+        background-image: url(../img/for_kids_pad.jpg);
+    }
+    .accesories{
+        background-image: url(../img/accesories_pad.jpg);
+    }
+    .fetured{
+        margin-bottom: 65px;
+
+        &__info{
+            margin-bottom: 73px; 
+
+        }
+    }
+    .advantages__info{
+        flex-direction: column;
+        padding: 48px 0 64px 0;
+    }
+    .advantages__item:not(:last-child){
+        margin-bottom: 48px;
+    }
+}  
+@media(max-width:667px){
+    .top{
+        height: 363px;
+    
+        &__content{
+            background-image: none;
+            justify-content: center;
+
+        }
+        &__text{
+            max-width: 263px;
+
+            & h1{
+                @include text(bold, 20px, 24px, #222222);
+            }
+            &--strong{
+                @include text(900, 38px, 46px, #222222);
+            }
+            &--red{
+                @include text(bold, 20px, 24px, #F16D7F);
+            }
+        }
+    }
+    .category{
+        margin: 64px 0;
+
+        &__wrap{
+            padding: 0 16px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item{
+            width: 100%;
+            height: 111px;
+    
+            &:not(:last-child){
+                width: 100%;
+                height: 247px;
+                margin: 0 0 32px 0;
+            }
+        }
+    }
+    .for_women{
+        background-image: url(../img/for_women_ph.jpg);
+    }
+    .for_man{
+        background-image: url(../img/for_men_ph.jpg);
+    }
+    .for_kids{
+        background-image: url(../img/for_kids_ph.jpg);
+    }
+    .accesories{
+        background-image: url(../img/accesories_ph.jpg);
+    }
+    .fetured{
+        margin-bottom: 97px;
+
+        &__info{
+            margin-bottom: 65px; 
+
+        }
+    }
+    .advantages__info{
+        flex-direction: column;
+        padding: 48px 0 81px 0;
+    }
+} 
 @import "block/header";
 @import "block/footer";
 @import "block/card";
