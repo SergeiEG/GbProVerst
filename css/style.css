@@ -546,7 +546,7 @@ header {
   right: 0;
   position: absolute;
   width: 232px;
-  height: calc(100vh - 79px);
+  height: calc(83.6vh - 79px);
   z-index: 2;
   background: white;
   -webkit-box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
