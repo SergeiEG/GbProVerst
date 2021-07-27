@@ -5,19 +5,17 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 1.5%;
+    margin-bottom: 18.5px;
 }
 .card{
-    width: 360px;
-    height: 581px;
+    max-width: 360px;
     background: rgba(248, 248, 248, 1);
     display: flex;
     flex-direction: column;
-    margin-right: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 30px;
 
-    &:nth-child(3n){
-        margin-right: 0;
+    &:not(:nth-child(3n)){
+        margin-right: 1%;
     }
     &__item{
         cursor: pointer;
@@ -86,27 +84,37 @@
         margin-top: 28.5px;
     }
 }
-@media(max-width:1155px){
-   .card:nth-child(3n){
-        margin-right: 2vw;
-        margin-bottom: 2vw;
-   } 
-   .card:nth-child(2n){
-        margin-right: 0;
+@media(max-width:1122px){
+    .cards__wrap{
+        margin-bottom: 16px;
     }
-    .card__pagination{
-        margin-top: 24px;
-    }
-}
-@media(max-width:756px){
     .card{
-        margin-right: 0;
         margin-bottom: 16px;
 
-        &:nth-child(3n){
+        &:not(:nth-child(3n)){
+            margin-right: 16px;
+        }
+        &:nth-child(3){
+            margin-right: 16px;
+        } 
+        &:nth-child(2n){
             margin-right: 0;
-            margin-bottom: 16px;
-       } 
+        }
+        &__pagination{
+            margin-top: 24px;
+        }
+    }
+    
+}
+@media(max-width:735px){
+    .cards__wrap{
+        margin-bottom: 25px;
+    }
+    .card:nth-child(odd){
+        margin-right: 0;
+    }
+    .card:not(:last-child){
+        margin-bottom: 16px;
     }
     .cards__wrap{
         margin-bottom: 24px;

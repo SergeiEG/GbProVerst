@@ -121,14 +121,14 @@
     .carousel{
     
         &__info{
-            position: none;
+            position: static;
             z-index: 1;
             width: 100%;
             margin-top: 0;
         }
     } 
     .product__card{
-        margin: 730px 0 128px 0;
+        margin: 129px 0 128px 0;
     }
     .carve{
         display: none;
@@ -166,6 +166,6 @@
         }
     }
     .product__card{
-        margin: 664px 0 64px 0;
+        margin: 64px 0;
     }
 }
