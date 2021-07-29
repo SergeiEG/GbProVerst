@@ -1,0 +1,177 @@
+@import "vars";
+
+.footer{
+    background-blend-mode: lighten;
+    background-color: rgba(244, 244, 244, 0.7);
+    background-image: url(../img/back_footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__info{
+        @include disflex();
+        justify-content: space-around;
+    }
+    &__text{
+        @include disflex();
+        margin: 97px 0 126px 0;
+        background-image: url(../img/face.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        max-height: 225px;
+        max-width: 360px;
+        text-align: center;
+
+        & p{
+            margin-top: 126px;
+            @include text(normal, 20px, 24px, #222224);
+            text-align: center;
+        }
+    }
+    &-basement{
+        background: rgba(34, 34, 36, 1);
+
+        &__content{
+            padding: 24px 10px;
+            @include disflex();
+            justify-content: space-between;   
+            align-items: center; 
+        }
+        &__text{
+            @include disflex();
+            @include text(normal, 16px, 19px, #FBFBFB);
+        }
+        &__list{
+            @include disflex();
+        }
+        &__item{
+            width: 32px;
+            height: 32px;
+            @include disflex();
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 1);
+
+            &:not(:last-child){
+                margin-right: 7px;
+            }
+            &:hover{
+                background-color: #F16D7F;
+
+                & svg{
+                    fill: #FFFFFF;
+                }
+            }
+            & svg{
+                fill: #000000;
+            }
+        }
+        &__link{
+            width: 32px;
+            height: 32px;
+            color: #000000;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 1);
+            @include disflex();
+            justify-content: center;
+            align-items: center;
+
+            &:not(:last-child){
+                margin-right: 7px;
+            }
+            &:hover{
+                color: #FFFFFF;
+                background: rgba(241, 109, 127, 1);
+            }
+        }
+    }
+}
+.subscribe-form{
+    max-width: 557px;
+    margin: 150px 0 156px 0;
+
+    & h3{
+        @include text(normal, 18px, 30px, #222224);
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    & span{
+        font-weight: bold;
+        font-size: 24px;
+    }    
+    &__item{
+        @include disflex();
+    }
+    &__input{
+        background: #E1E1E1;
+        width: 256px;
+        height: 49px;
+        border-radius: 50px 0 0 50px;
+        border: 0px;
+        padding: 0 22px;
+        @include text(normal, 14px, 17px, #222224);
+        opacity: 0.67;
+    }
+    &__button{
+        cursor: pointer;
+        background: rgba(241, 109, 127, 1);
+        width: 100px;
+        height: 49px;
+        border-radius: 0 50px 50px 0;
+        border: 0px;
+        @include text(normal, 14px, 17px, #FFFFFF);
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    
+}
+@media(max-width:1024px){
+    .footer{
+        background-image: url(../img/back_footer2.jpg);
+
+        &-basement__content{
+            padding: 24px 32px;
+        }
+        &__info{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text{
+            margin: 53px 0 48px 0;
+        }
+    } 
+    .subscribe-form{
+        margin: 0px 0 140px 0;
+    }
+}
+@media(max-width:667px){
+    .footer__text{
+        margin: 53px 0 59px 0;
+
+        & p{
+            @include text(normal, 18px, 22px, #222224);
+        }
+    }
+    .subscribe-form{
+        margin: 0px 0 109px 0;
+
+        & h3{
+            @include text(normal, 14px, 21px, #222224)
+        
+        }        
+        & span{
+            @include text(bold, 24px, 37px, #222224)
+        }
+    }
+    .footer-basement__content{
+        padding: 43px 0 24px 0;
+        flex-direction: column;
+    }
+    .footer-basement__text{
+        order: 2;
+    }
+    .footer-basement__list{
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,35 @@
+@import "vars";
+
+.intro{
+    background: rgba(248, 243, 244, 1);
+
+    &__wrap{
+        height: 148px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 10px;
+
+        & h2{
+            @include text(normal, 24px, 29px, #F16D7F);
+        }
+        & h3{
+            @include text(300, 14px, 17px, #636363);
+        }
+        & span{
+            font-weight: bold;
+            color: #F16D7F;
+        }
+    }
+}
+@media(max-width:667px){
+    .intro__wrap{
+        flex-direction: column;
+        padding: 24px 0 46px 0;
+        justify-content: center;
+
+        & h3{
+            margin-top: 32px;
+        }
+    }
+}

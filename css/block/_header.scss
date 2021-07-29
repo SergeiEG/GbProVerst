@@ -1,0 +1,102 @@
+@import "vars";
+
+header{
+    background: #222222;
+    padding: 19px 10px;
+    position: relative;
+}
+.header{
+    @include disflex();
+    justify-content: space-between;
+
+    &-left{
+        @include disflex();
+        align-items: center;
+    }
+    &-right{
+        @include disflex();
+        align-items: center;
+    }
+    &__logo{
+        margin-right: 41px;
+        text-decoration: none;
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__item{
+        cursor: pointer;
+        align-self: center;
+        text-decoration: none;
+
+        &:hover{
+            opacity: 0.7;
+        }
+        &:not(:last-child){
+            margin-right: 33px;
+        }
+    }
+    &__wrap{
+        padding: 37px 0 0 34px;
+
+        & ul{
+            list-style-type: none;
+            padding-left: 21px;
+        }
+        & label{
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        &--strong{
+            @include text(bold, 14px, 17px, #000000);
+            margin-bottom: 24px;
+        }
+        &--red{
+            @include text(normal, 14px, 17px, #F16D7F);
+            margin-bottom: 12px;
+        }
+        & li:not(:last-child){
+            margin-bottom: 11px;
+        }
+        & li:last-child{
+            margin-bottom: 20px;
+        }
+        & a{
+            text-decoration: none;
+            color: #6F6E6E !important;
+            @include text(normal, 14px, 17px, #6F6E6E);
+        }
+    }
+    &__toggle{
+        display: none;
+    }
+    &__menu{
+        overflow-y: scroll;
+        top: 100%;
+        right: 0;
+        position: absolute;
+        width: 232px;
+        height: calc(83.6vh - 79px);
+        z-index: 2;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    }
+}
+#toggle:checked ~ .header__menu{
+    display: block;
+}
+#toggle:not(:checked) ~ .header__menu{
+    display: none;
+}
+@media(max-width:667px){
+    .hidden{
+        display: none;
+    }
+}
