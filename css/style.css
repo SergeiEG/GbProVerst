@@ -77,19 +77,17 @@ section {
 
 .category__wrap {
   padding: 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 30px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .category__item {
-  width: 100%;
-  height: 180px;
+  height: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,10 +100,11 @@ section {
   position: relative;
 }
 
-.category__item:not(:last-child) {
-  width: 31%;
-  height: 260px;
-  margin: 0 0 2.5% 0;
+.category__item:last-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  height: 180px;
 }
 
 .category__img {
@@ -317,12 +316,16 @@ section {
   .category {
     margin: 20px 0 155px 0;
   }
-  .category__item {
-    height: 116px;
+  .category__wrap {
+    row-gap: 20px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
   }
-  .category__item:not(:last-child) {
+  .category__item {
     height: 167px;
-    margin: 0 0 2.5% 0;
+  }
+  .category__item:last-child {
+    height: 116px;
   }
   .for_women {
     background-image: url(../img/for_women_pad.jpg);
@@ -393,25 +396,20 @@ section {
   }
   .category__wrap {
     padding: 0 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    row-gap: 32px;
   }
   .category__item {
-    width: 100%;
-    height: 111px;
-  }
-  .category__item:not(:last-child) {
-    width: 100%;
     height: 247px;
-    margin: 0 0 32px 0;
+  }
+  .category__item:last-child {
+    height: 111px;
   }
   .for_women {
     background-image: url(../img/for_women_ph.jpg);
@@ -854,7 +852,7 @@ header {
 }
 
 .card:not(:nth-child(3n)) {
-  margin-right: 1%;
+  margin-right: 2%;
 }
 
 .card__item {
@@ -959,7 +957,7 @@ header {
   margin-top: 28.5px;
 }
 
-@media (max-width: 1122px) {
+@media (max-width: 1160px) {
   .cards__wrap {
     margin-bottom: 16px;
   }

@@ -15,7 +15,7 @@
     margin-bottom: 30px;
 
     &:not(:nth-child(3n)){
-        margin-right: 1%;
+        margin-right: 2%;
     }
     &__item{
         cursor: pointer;
@@ -84,7 +84,7 @@
         margin-top: 28.5px;
     }
 }
-@media(max-width:1122px){
+@media(max-width:1160px){
     .cards__wrap{
         margin-bottom: 16px;
     }
