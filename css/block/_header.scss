@@ -20,12 +20,19 @@ header{
     &__logo{
         margin-right: 41px;
         text-decoration: none;
+
+        &:hover{
+            opacity: 0.7;
+        }
     }
     &__item{
         cursor: pointer;
         align-self: center;
         text-decoration: none;
-        
+
+        &:hover{
+            opacity: 0.7;
+        }
         &:not(:last-child){
             margin-right: 33px;
         }

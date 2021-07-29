@@ -53,6 +53,10 @@
             border: none;
             cursor: pointer;
             @include text(300, 16px, 19px, #FFFFFF);
+
+            &:hover{
+                opacity: 0.7;
+            }
         }
     }
     &__item{
@@ -76,6 +80,10 @@
             @include text(normal, 14px, 17px, #000000);
             border: 1px solid rgba(164, 164, 164, 1);
             background-color: #FFFFFF;
+
+            &:hover{
+                opacity: 0.7;
+            }
         }
     }
     &__text{
@@ -109,6 +117,10 @@
     cursor: pointer;
     top: 28px;
     right: 22px;
+
+    &:hover{
+        opacity: 0.7;
+    }
 }
 .adress-form{
     display: flex;
@@ -123,7 +135,7 @@
         height: 45px;
         margin-top: 20px;
         @include text(300, 13px, 16px, #222222);
-        padding: 13px 0 16px 17px;
+        padding: 13px 17px 16px 17px;
         border: 1px solid rgba(164, 164, 164, 1);
 
         &:first-child{
@@ -137,7 +149,11 @@
         max-width: 100px;
         @include text(300, 11px, 13px, #4A4A4A);
         background: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(164, 164, 164, 1)
+        border: 1px solid rgba(164, 164, 164, 1);
+
+        &:hover{
+            opacity: 0.7;
+        }
     }
 }
 @media(max-width:1060px){
