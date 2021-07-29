@@ -512,6 +512,10 @@ header {
   right: 16px;
 }
 
+.header__wrap label:hover {
+  opacity: 0.7;
+}
+
 .header__wrap--strong {
   font-style: normal;
   font-weight: bold;

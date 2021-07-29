@@ -49,6 +49,10 @@ header{
             position: absolute;
             top: 16px;
             right: 16px;
+
+            &:hover{
+                opacity: 0.7;
+            }
         }
         &--strong{
             @include text(bold, 14px, 17px, #000000);
